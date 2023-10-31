@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import styles from "./App.module.css"
 
 function App() {
   const [todo, setTodo] = useState("");
@@ -16,23 +17,23 @@ function App() {
     setTodos(todos.filter((item,fIndex) => index !== fIndex));
   };
   return (
-    <div>
-      <h1>My To Dos ({todos.length})</h1>
+    <div className={styles.wrap}>
+      <div className={styles.title}>My To Dos ({todos.length})</div>
       <form onSubmit={onSubmit}>
       <input 
         onChange={onChange} 
         value={todo} 
         type="text" 
-        placeholder="Write your todos">
+        placeholder="Write your todos"
+        className={styles.todoInput}>
       </input>
-      <button>Add todo</button>
+      <button className={styles.btn}>Add todo</button>
       </form>
-      <hr />
-      <ul>
+      <ul className={styles.list}>
       {todos.map((item,index) => (
       <li key={index}>
         {item}
-        <button onClick={()=>deleteTodo(index)}>❌</button>
+        <button className={styles.delete_btn} onClick={()=>deleteTodo(index)}>❌</button>
       </li>))
       }
       </ul>

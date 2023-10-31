@@ -1,0 +1,45 @@
+.wrap {
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title {
+  font-family: sans-serif;
+  font-size: 40px;
+  margin: 20px 0;
+}
+
+.todoInput {
+  border: 0;
+  border-bottom: 1px solid;
+  outline: none;
+
+}
+
+.btn {
+  border: black;
+  color: white;
+  background: black;
+  margin-left: 10px;
+}
+
+.list {
+  width: 300px;
+  margin: 30px 0;
+}
+
+.list li {
+  word-wrap: break-word;
+}
+
+.delete_btn{
+  border: none;
+  background-color: inherit;
+  margin-left: 20px;
+}
